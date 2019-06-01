@@ -20,8 +20,8 @@ proxy.list.push(42);
 proxy.list.push(23);
 
 // safely access nested properties or pop from arrays
-assert(proxy.foo.bar() === 13);
-assert(proxy.baz.bang() === undefined);
+assert(proxy.foo.bar.valueOf() === 13);
+assert(proxy.baz.bang.valueOf() === undefined);
 assert(proxy.list.pop() === 23);
 assert(proxy.baz.pop() === undefined);
 
@@ -50,8 +50,8 @@ const proxy = safe(object);
 
 // GOOD: do this
 const status = proxy.info.status;
-while (status() === "incomplete") { ... }
+while (status.valueOf() === "incomplete") { ... }
 
 // BAD: don't do this
-while (proxy.info.status() === "incomplete") { ... }
+while (proxy.info.status.valueOf() === "incomplete") { ... }
 ```
