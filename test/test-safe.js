@@ -37,6 +37,14 @@ describe("safe(object)", () => {
         expect(object.array).to.contain("foo");
     });
 
+    it("should push multiple values to nested array when pushed", () => {
+        object.array = [];
+        proxy.array.push("foo", "bar");
+        expect(object.array.length).to.be(2);
+        expect(object.array).to.contain("foo");
+        expect(object.array).to.contain("bar");
+    });
+
     it("should pop value from nested array when popped", () => {
         object.array = ["foo"];
         expect(proxy.array.pop()).to.be("foo");

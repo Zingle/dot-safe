@@ -65,10 +65,10 @@ function safe(object) {
 
     /**
      * Resolve the path, fallback to an empty array, and push a value on it.
-     * @param {*} value
+     * @param {array} values
      */
-    function push(value) {
-        fallback([]).push(value);
+    function push(...values) {
+        fallback([]).push(...values);
     }
 
     /**
