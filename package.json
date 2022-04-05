@@ -1,6 +1,6 @@
 {
   "name": "dot-safe",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "access unstructured data without errors",
   "main": "safe.js",
   "directories": {
@@ -29,6 +29,6 @@
   "homepage": "https://github.com/Zingle/dot-safe#readme",
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "^9.0.3"
+    "mocha": "^9.2.1"
   }
 }
